@@ -1,9 +1,20 @@
 [project]
 name = "modernpython"
 version = "0.1.0"
-description = "Add your description here"
+description = "现代化python教程"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "langchain>=0.3.27",
+    "rich>=14.2.0",
 ]
+
+[tool.ruff]
+target-version = "py312"
+preview = true
+lint.select = ["E", "F", "W", "C90", "B", "E501"]
+
+exclude = ["tests/*", "docs/*", "build/*", "dist/*"]
+
+[tool.ruff.format]
+quote-style = 'double'
